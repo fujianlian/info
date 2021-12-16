@@ -229,7 +229,7 @@ async function getGlobalData(ethPrice, oldEthPrice) {
   try {
     // get timestamps for the days
     const utcCurrentTime = dayjs()
-    const utcOneDayBack = utcCurrentTime.subtract(0.5, 'day').unix()
+    const utcOneDayBack = utcCurrentTime.subtract(1, 'day').unix()
     const utcTwoDaysBack = utcCurrentTime.subtract(2, 'day').unix()
     const utcOneWeekBack = utcCurrentTime.subtract(1, 'week').unix()
     const utcTwoWeeksBack = utcCurrentTime.subtract(2, 'week').unix()
@@ -469,7 +469,7 @@ const getGlobalTransactions = async () => {
  */
 const getEthPrice = async () => {
   const utcCurrentTime = dayjs()
-  const utcOneDayBack = utcCurrentTime.subtract(0.5, 'day').startOf('minute').unix()
+  const utcOneDayBack = utcCurrentTime.subtract(1, 'day').startOf('minute').unix()
 
   let ethPrice = 0
   let ethPriceOneDay = 0
