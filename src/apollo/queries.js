@@ -3,7 +3,7 @@ import { FACTORY_ADDRESS, BUNDLE_ID } from '../constants'
 
 export const SUBGRAPH_HEALTH = gql`
   query health {
-    indexingStatusForCurrentVersion(subgraphName: "a2a6c172b3f1b60a8ce26f/abc") {
+    indexingStatusForCurrentVersion(subgraphName: "blocklytics/ethereum-blocks") {
       synced
       health
       chains {
